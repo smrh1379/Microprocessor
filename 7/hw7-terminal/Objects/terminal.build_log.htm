@@ -1,0 +1,163 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: smrh hsi, a, LIC=47GU5-GCEHJ-Z94G9-4NTZK-7EGBT-5HH3B
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  D:\keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Smrh\Documents\keil\hw7\hw7.uvprojx
+Project File Date:  05/30/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'D:\keil\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+s.c(10): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void uart_init();
+              ^
+               void
+s.c(11): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void keypad_init();
+                ^
+                 void
+s.c(15): warning: no previous extern declaration for non-static variable 'mode' [-Wmissing-variable-declarations]
+int mode=0;
+    ^
+s.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int mode=0;
+^
+s.c(16): warning: no previous prototype for function 'TIM2Config' [-Wmissing-prototypes]
+void TIM2Config (void)
+     ^
+s.c(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2Config (void)
+^
+static 
+s.c(36): warning: no previous prototype for function 'Delay_us' [-Wmissing-prototypes]
+void Delay_us (uint16_t us)
+     ^
+s.c(36): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Delay_us (uint16_t us)
+^
+static 
+s.c(47): warning: no previous prototype for function 'Delay_ms' [-Wmissing-prototypes]
+void Delay_ms (uint16_t ms)
+     ^
+s.c(47): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Delay_ms (uint16_t ms)
+^
+static 
+s.c(60): warning: unused variable 'i' [-Wunused-variable]
+int i;  
+    ^
+s.c(81): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->AFR[0] &=~(0XFF00) ;
+              ~~^~~~~~~~~
+s.c(83): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->MODER &= ~(0X00FF) ;
+             ~~ ^~~~~~~~~
+s.c(77): warning: no previous prototype for function 'uart_init' [-Wmissing-prototypes]
+void uart_init(){
+     ^
+s.c(10): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void uart_init();
+     ^
+               void
+s.c(77): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void uart_init(){
+              ^
+s.c(93): warning: unused variable 't' [-Wunused-variable]
+char t;
+     ^
+s.c(99): warning: unused variable 'number' [-Wunused-variable]
+int number=0;
+    ^
+s.c(91): warning: no previous prototype for function 'keypad_init' [-Wmissing-prototypes]
+void keypad_init(){
+     ^
+s.c(11): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void keypad_init();
+     ^
+                 void
+s.c(91): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void keypad_init(){
+                ^
+s.c(225): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+return USART2->DR;
+~~~~~~ ~~~~~~~~^~
+s.c(253): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<6)  ;                         /* RS = 0, R/W = 0 */
+               ~~ ^~~~~~~
+s.c(254): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          GPIOB->ODR &= ~(1<<5)  ;
+                     ~~ ^~~~~~~
+s.c(260): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<7);                             /* clear EN */
+               ~~ ^~~~~~~
+s.c(271): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<6)  ;                    /* R/W = 0 */
+               ~~ ^~~~~~~
+s.c(276): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<7);                   /* clear EN */
+               ~~ ^~~~~~~
+s.c(286): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+s.c(282): warning: unused variable 'j' [-Wunused-variable]
+                int j;
+                    ^
+23 warnings generated.
+compiling s.c...
+linking...
+Program Size: Code=1564 RO-data=420 RW-data=0 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\terminal.axf" - 0 Error(s), 23 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Smrh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Smrh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

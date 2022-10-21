@@ -1,0 +1,332 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: smrh hsi, a, LIC=47GU5-GCEHJ-Z94G9-4NTZK-7EGBT-5HH3B
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  D:\keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Smrh\Documents\keil\FINAL PROJECT\FINAL.uvprojx
+Project File Date:  06/19/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'D:\keil\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+MAIN_SAMPLING.c(2): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void ADC_init();
+             ^
+              void
+MAIN_SAMPLING.c(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void USART_init();
+               ^
+                void
+MAIN_SAMPLING.c(7): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM2CONFIG();
+               ^
+                void
+MAIN_SAMPLING.c(8): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM3CONFIG();
+               ^
+                void
+MAIN_SAMPLING.c(9): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM4CONFIG();
+               ^
+                void
+MAIN_SAMPLING.c(19): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void LCD_SET();
+            ^
+             void
+MAIN_SAMPLING.c(20): warning: no previous extern declaration for non-static variable 'count' [-Wmissing-variable-declarations]
+int count=0;
+    ^
+MAIN_SAMPLING.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int count=0;
+^
+MAIN_SAMPLING.c(21): warning: no previous extern declaration for non-static variable 'samples' [-Wmissing-variable-declarations]
+uint8_t samples[128]={0};
+        ^
+MAIN_SAMPLING.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t samples[128]={0};
+^
+MAIN_SAMPLING.c(26): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  return ADC1->DR;
+  ~~~~~~ ~~~~~~^~
+MAIN_SAMPLING.c(23): warning: no previous prototype for function 'adc_conv' [-Wmissing-prototypes]
+uint16_t adc_conv(){
+         ^
+MAIN_SAMPLING.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint16_t adc_conv(){
+^
+static 
+MAIN_SAMPLING.c(23): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+uint16_t adc_conv(){
+                 ^
+MAIN_SAMPLING.c(29): warning: no previous extern declaration for non-static variable 'TU' [-Wmissing-variable-declarations]
+volatile double TU=100;
+                ^
+MAIN_SAMPLING.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile double TU=100;
+         ^
+MAIN_SAMPLING.c(30): warning: no previous extern declaration for non-static variable 'A' [-Wmissing-variable-declarations]
+volatile double A=1;
+                ^
+MAIN_SAMPLING.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile double A=1;
+         ^
+MAIN_SAMPLING.c(31): warning: no previous extern declaration for non-static variable 'B' [-Wmissing-variable-declarations]
+volatile double B=1;
+                ^
+MAIN_SAMPLING.c(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile double B=1;
+         ^
+MAIN_SAMPLING.c(55): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+        send((A*10));
+        ~~~~  ~^~~
+MAIN_SAMPLING.c(66): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+        send((A*10));
+        ~~~~  ~^~~
+MAIN_SAMPLING.c(76): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+        send((B*10));
+        ~~~~  ~^~~
+MAIN_SAMPLING.c(88): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+        send((B*10));
+        ~~~~  ~^~~
+MAIN_SAMPLING.c(105): warning: no previous prototype for function 'FRQ' [-Wmissing-prototypes]
+void FRQ(){
+     ^
+MAIN_SAMPLING.c(105): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void FRQ(){
+^
+static 
+MAIN_SAMPLING.c(105): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void FRQ(){
+        ^
+MAIN_SAMPLING.c(111): warning: no previous prototype for function 'ADC_init' [-Wmissing-prototypes]
+void ADC_init(){
+     ^
+MAIN_SAMPLING.c(2): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void ADC_init();
+     ^
+              void
+MAIN_SAMPLING.c(111): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void ADC_init(){
+             ^
+MAIN_SAMPLING.c(138): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->AFR[0] &=~(0XFF00) ;
+              ~~^~~~~~~~~
+MAIN_SAMPLING.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->MODER &= ~(0X00F0) ;
+             ~~ ^~~~~~~~~
+MAIN_SAMPLING.c(133): warning: no previous prototype for function 'USART_init' [-Wmissing-prototypes]
+void USART_init(){
+     ^
+MAIN_SAMPLING.c(3): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void USART_init();
+     ^
+                void
+MAIN_SAMPLING.c(133): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void USART_init(){
+               ^
+MAIN_SAMPLING.c(150): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+USART2->DR=(c);
+          ~ ^
+MAIN_SAMPLING.c(160): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+return USART2->DR;
+~~~~~~ ~~~~~~~~^~
+MAIN_SAMPLING.c(162): warning: no previous prototype for function 'TIM3CONFIG' [-Wmissing-prototypes]
+void TIM3CONFIG(){
+     ^
+MAIN_SAMPLING.c(8): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void TIM3CONFIG();
+     ^
+                void
+MAIN_SAMPLING.c(162): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM3CONFIG(){
+               ^
+MAIN_SAMPLING.c(174): warning: no previous prototype for function 'TIM2CONFIG' [-Wmissing-prototypes]
+void TIM2CONFIG(){
+     ^
+MAIN_SAMPLING.c(7): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void TIM2CONFIG();
+     ^
+                void
+MAIN_SAMPLING.c(174): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM2CONFIG(){
+               ^
+MAIN_SAMPLING.c(189): warning: no previous prototype for function 'TIM3_IRQHandler' [-Wmissing-prototypes]
+void TIM3_IRQHandler(void){
+     ^
+MAIN_SAMPLING.c(189): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM3_IRQHandler(void){
+^
+static 
+MAIN_SAMPLING.c(207): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+while(!(ADC1->SR & 1<<1)){GPIOC->ODR &= ~(1<<15);}/*END OF CONVERSION */
+                                     ~~ ^~~~~~~~
+MAIN_SAMPLING.c(210): warning: implicit conversion from 'volatile uint32_t' (aka 'volatile unsigned int') to 'float' may lose precision [-Wimplicit-int-float-conversion]
+RESULT=ADC1->DR;
+      ~~~~~~~^~
+MAIN_SAMPLING.c(211): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->ODR |= ((int)RESULT) <<5;
+           ~~ ~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(214): warning: implicit conversion changes signedness: 'int' to 'uint8_t' (aka 'unsigned char') [-Wsign-conversion]
+GLCD_Data[count]=((int)((RESULT*64)+count))%63;
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(214): warning: implicit conversion from 'int' to 'float' may lose precision [-Wimplicit-int-float-conversion]
+GLCD_Data[count]=((int)((RESULT*64)+count))%63;
+                                   ~^~~~~
+MAIN_SAMPLING.c(202): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
+void TIM2_IRQHandler(void){
+     ^
+MAIN_SAMPLING.c(202): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void TIM2_IRQHandler(void){
+^
+static 
+MAIN_SAMPLING.c(220): warning: no previous prototype for function 'TIM4CONFIG' [-Wmissing-prototypes]
+void TIM4CONFIG(){
+     ^
+MAIN_SAMPLING.c(9): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void TIM4CONFIG();
+     ^
+                void
+MAIN_SAMPLING.c(220): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM4CONFIG(){
+               ^
+MAIN_SAMPLING.c(253): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<1)  ;                         /* RS = 0, R/W = 0 */
+               ~~ ^~~~~~~
+MAIN_SAMPLING.c(254): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+          GPIOB->ODR &= ~(1<<0)  ;
+                     ~~ ^~~~~~~
+MAIN_SAMPLING.c(260): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<2);                             /* clear EN */
+               ~~ ^~~~~~~
+MAIN_SAMPLING.c(271): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<1)  ;                    /* R/W = 0 */
+               ~~ ^~~~~~~
+MAIN_SAMPLING.c(276): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->ODR &= ~(1<<2);                   /* clear EN */
+               ~~ ^~~~~~~
+MAIN_SAMPLING.c(302): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+if  (b==1){
+     ~^ ~
+MAIN_SAMPLING.c(312): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(anotherIntValue+48);
+~~~~~~~~ ~~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(316): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(intValue+48);  
+~~~~~~~~ ~~~~~~~~^~~
+MAIN_SAMPLING.c(318): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(anotherIntValue+48);
+~~~~~~~~ ~~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(328): warning: declaration shadows a variable in the global scope [-Wshadow]
+int count=0;
+    ^
+MAIN_SAMPLING.c(20): note: previous declaration is here
+int count=0;
+    ^
+MAIN_SAMPLING.c(334): warning: implicitly declaring library function 'pow' with type 'double (double, double)' [-Wimplicit-function-declaration]
+LCD_data(((Value % (int) pow(10,count))/(int) pow(10,count-1))+48);
+                         ^
+MAIN_SAMPLING.c(334): note: include the header <math.h> or explicitly provide a declaration for 'pow'
+MAIN_SAMPLING.c(334): warning: cast from function call of type 'double' to non-matching type 'int' [-Wbad-function-cast]
+LCD_data(((Value % (int) pow(10,count))/(int) pow(10,count-1))+48);
+                         ^~~~~~~~~~~~~
+MAIN_SAMPLING.c(334): warning: cast from function call of type 'double' to non-matching type 'int' [-Wbad-function-cast]
+LCD_data(((Value % (int) pow(10,count))/(int) pow(10,count-1))+48);
+                                              ^~~~~~~~~~~~~~~
+MAIN_SAMPLING.c(334): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(((Value % (int) pow(10,count))/(int) pow(10,count-1))+48);
+~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(356): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+if  (v==1){
+     ~^ ~
+MAIN_SAMPLING.c(363): warning: declaration shadows a local variable [-Wshadow]
+int anotherIntValue = (int)(v * 10);
+    ^
+MAIN_SAMPLING.c(345): note: previous declaration is here
+int anotherIntValue = (int)(diffValue * 10);
+    ^
+MAIN_SAMPLING.c(366): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(anotherIntValue+48);
+~~~~~~~~ ~~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(370): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(intValue+48);  
+~~~~~~~~ ~~~~~~~~^~~
+MAIN_SAMPLING.c(372): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+LCD_data(anotherIntValue+48);
+~~~~~~~~ ~~~~~~~~~~~~~~~^~~
+MAIN_SAMPLING.c(391): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+MAIN_SAMPLING.c(376): warning: no previous prototype for function 'LCD_SET' [-Wmissing-prototypes]
+void LCD_SET(){
+     ^
+MAIN_SAMPLING.c(19): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void LCD_SET();
+     ^
+             void
+MAIN_SAMPLING.c(376): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void LCD_SET(){
+            ^
+MAIN_SAMPLING.c(28): warning: no previous extern declaration for non-static variable 'GLCD_Data' [-Wmissing-variable-declarations]
+uint8_t GLCD_Data[128];
+        ^
+MAIN_SAMPLING.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t GLCD_Data[128];
+^
+64 warnings generated.
+compiling MAIN_SAMPLING.c...
+linking...
+Program Size: Code=10452 RO-data=580 RW-data=24 ZI-data=1768  
+FromELF: creating hex file...
+".\Objects\FINAL.axf" - 0 Error(s), 64 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Smrh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Smrh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

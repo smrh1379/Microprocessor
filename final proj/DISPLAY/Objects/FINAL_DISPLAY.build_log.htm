@@ -1,0 +1,274 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: smrh hsi, a, LIC=47GU5-GCEHJ-Z94G9-4NTZK-7EGBT-5HH3B
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  D:\keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Smrh\Documents\keil\FINAL PROJECT\DISPLAY\FINAL_DISPLAY.uvprojx
+Project File Date:  06/21/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'D:\keil\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+DISPLAY.c(2): warning: no previous extern declaration for non-static variable 'cs_cursor' [-Wmissing-variable-declarations]
+int x_cursor,y_cursor,cs_cursor = 0;
+                      ^
+DISPLAY.c(2): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int x_cursor,y_cursor,cs_cursor = 0;
+^
+DISPLAY.c(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void cls();
+        ^
+         void
+DISPLAY.c(5): warning: no previous extern declaration for non-static variable 'Terminal6x8' [-Wmissing-variable-declarations]
+const unsigned short Terminal6x8[] = {
+                     ^
+DISPLAY.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const unsigned short Terminal6x8[] = {
+      ^
+DISPLAY.c(103): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void USART_init();
+               ^
+                void
+DISPLAY.c(104): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void PORTS_init();
+               ^
+                void
+DISPLAY.c(108): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void TIM2CONFIG();
+               ^
+                void
+DISPLAY.c(112): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int get_x_pixel();
+               ^
+                void
+DISPLAY.c(113): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+int get_y_pixel();
+               ^
+                void
+DISPLAY.c(120): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void GLCD_INIT();
+              ^
+               void
+DISPLAY.c(123): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void update();
+           ^
+            void
+DISPLAY.c(124): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void cls();
+        ^
+         void
+DISPLAY.c(128): warning: no previous extern declaration for non-static variable 'mode' [-Wmissing-variable-declarations]
+int mode=0;
+    ^
+DISPLAY.c(128): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int mode=0;
+^
+DISPLAY.c(129): warning: no previous prototype for function 'reset' [-Wmissing-prototypes]
+void reset(){
+     ^
+DISPLAY.c(129): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void reset(){
+^
+static 
+DISPLAY.c(129): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void reset(){
+          ^
+DISPLAY.c(171): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+recieved=get();
+        ~^~~~~
+DISPLAY.c(177): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+        temp=(temp*A)+B;
+            ~~~~~~~~~^~
+DISPLAY.c(142): warning: unused variable 'TU' [-Wunused-variable]
+volatile double TU=100;
+                ^
+DISPLAY.c(199): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->AFR[0] &=~(0XFF00) ;
+              ~~^~~~~~~~~
+DISPLAY.c(201): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOA->MODER &= ~(0X00F0) ;
+             ~~ ^~~~~~~~~
+DISPLAY.c(196): warning: no previous prototype for function 'USART_init' [-Wmissing-prototypes]
+void USART_init(){
+     ^
+DISPLAY.c(103): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void USART_init();
+     ^
+                void
+DISPLAY.c(196): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void USART_init(){
+               ^
+DISPLAY.c(208): warning: no previous prototype for function 'PORTS_init' [-Wmissing-prototypes]
+void PORTS_init(){
+     ^
+DISPLAY.c(104): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void PORTS_init();
+     ^
+                void
+DISPLAY.c(208): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void PORTS_init(){
+               ^
+DISPLAY.c(228): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+return USART2->DR;
+~~~~~~ ~~~~~~~~^~
+DISPLAY.c(230): warning: no previous prototype for function 'TIM2CONFIG' [-Wmissing-prototypes]
+void TIM2CONFIG(){
+     ^
+DISPLAY.c(108): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void TIM2CONFIG();
+     ^
+                void
+DISPLAY.c(230): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void TIM2CONFIG(){
+               ^
+DISPLAY.c(274): warning: no previous prototype for function 'get_x_pixel' [-Wmissing-prototypes]
+int get_x_pixel(){
+    ^
+DISPLAY.c(112): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int get_x_pixel();
+    ^
+                void
+DISPLAY.c(274): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+int get_x_pixel(){
+               ^
+DISPLAY.c(278): warning: no previous prototype for function 'get_y_pixel' [-Wmissing-prototypes]
+int get_y_pixel() {
+    ^
+DISPLAY.c(113): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+int get_y_pixel();
+    ^
+                void
+DISPLAY.c(278): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+int get_y_pixel() {
+               ^
+DISPLAY.c(282): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOB->ODR &= ~(1<<0);// RS=0 
+           ~~ ^~~~~~~
+DISPLAY.c(284): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOB->ODR &=   ~(1<<1) ; // RW=0
+           ~~   ^~~~~~~
+DISPLAY.c(286): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+GPIOB->ODR &= ~(1<<2) ;//E=0
+           ~~ ^~~~~~~
+DISPLAY.c(314): warning: no previous extern declaration for non-static variable 'H' [-Wmissing-variable-declarations]
+char H[]={0x7F, 0x08, 0x08, 0x08, 0x7F, 0x00};
+     ^
+DISPLAY.c(314): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char H[]={0x7F, 0x08, 0x08, 0x08, 0x7F, 0x00};
+^
+DISPLAY.c(315): warning: no previous prototype for function 'Glcd_DisplayChar' [-Wmissing-prototypes]
+void Glcd_DisplayChar(char *ptr_array)
+     ^
+DISPLAY.c(315): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Glcd_DisplayChar(char *ptr_array)
+^
+static 
+DISPLAY.c(352): warning: no previous prototype for function 'GLCD_INIT' [-Wmissing-prototypes]
+void GLCD_INIT(){
+     ^
+DISPLAY.c(120): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void GLCD_INIT();
+     ^
+               void
+DISPLAY.c(352): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void GLCD_INIT(){
+              ^
+DISPLAY.c(394): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+                        GLCD_Data[get_x_pixel()][get_y_pixel() + j] = bit;
+                                                                    ~ ^~~
+DISPLAY.c(401): warning: no previous prototype for function 'update' [-Wmissing-prototypes]
+void update() {
+     ^
+DISPLAY.c(123): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void update();
+     ^
+            void
+DISPLAY.c(401): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void update() {
+           ^
+DISPLAY.c(432): warning: no previous prototype for function 'cls' [-Wmissing-prototypes]
+void cls() {
+     ^
+DISPLAY.c(124): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void cls();
+     ^
+         void
+DISPLAY.c(432): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void cls() {
+        ^
+DISPLAY.c(2): warning: no previous extern declaration for non-static variable 'x_cursor' [-Wmissing-variable-declarations]
+int x_cursor,y_cursor,cs_cursor = 0;
+    ^
+DISPLAY.c(2): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int x_cursor,y_cursor,cs_cursor = 0;
+^
+DISPLAY.c(2): warning: no previous extern declaration for non-static variable 'y_cursor' [-Wmissing-variable-declarations]
+int x_cursor,y_cursor,cs_cursor = 0;
+             ^
+DISPLAY.c(2): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int x_cursor,y_cursor,cs_cursor = 0;
+^
+DISPLAY.c(4): warning: no previous extern declaration for non-static variable 'GLCD_Data' [-Wmissing-variable-declarations]
+uint16_t GLCD_Data[128][64];
+         ^
+DISPLAY.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t GLCD_Data[128][64];
+^
+45 warnings generated.
+compiling DISPLAY.c...
+linking...
+Program Size: Code=3944 RO-data=420 RW-data=0 ZI-data=18032  
+FromELF: creating hex file...
+".\Objects\FINAL_DISPLAY.axf" - 0 Error(s), 45 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Smrh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Smrh\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
